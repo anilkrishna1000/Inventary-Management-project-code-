@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Airlines Delay Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/new4.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Airline Delay </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="MONTH" placeholder="MONTH" required="required" />
+		<input type="text" name="DAY" placeholder="DAY" required="required" />
+		<input type="text" name="DAY_OF_WEEK" placeholder="DAY_OF_WEEK" required="required" />
+        <input type="text" name="SCHEDULED_DEPARTURE" placeholder="SCHEDULED_DEPARTURE" required="required" />
+	    <input type="text" name="DEPARTURE_TIME" placeholder="DEPARTURE_TIME" required="required" />
+		<input type="text" name="TAXI_OUT" placeholder="TAXI_OUT" required="required" />
+		<input type="text" name="DISTANCE" placeholder="DISTANCE" required="required" />
+	    <input type="text" name="TAXI_IN" placeholder="TAXI_IN" required="required" />
+		<input type="text" name="SCHEDULED_ARRIVAL" placeholder="SCHEDULED_ARRIVAL" required="required" />
+		<input type="text" name="ARRIVAL_DELAY" placeholder="ARRIVAL_DELAY" required="required" />
+		
+		 <h2>AIRLINE</h2>
+    <div>
+        <select class="Airline" name="" id="AIRLINE">
+            <option value="" disabled="disabled" selected="selected">Choose a Airline</option>
+            <option>AIRLINE_AS</option>
+            <option>AIRLINE_B6</option>
+            <option>AIRLINE_DL</option>
+            <option>AIRLINE_EV</option>
+		    <option>AIRLINE_F9</option>
+            <option>AIRLINE_HA</option>
+		    <option>AIRLINE_MQ</option>
+            <option>AIRLINE_NK</option>
+		    <option>AIRLINE_OO</option>
+            <option>AIRLINE_UA</option>
+		    <option>AIRLINE_US</option>
+            <option>AIRLINE_VX</option>
+		    <option>AIRLINE_WN</option>
+		
+		</select>
+    </div>
+               
+ </div>
+	   <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+   <br>
+   <br>
+   <p>©2020 Anil Krishna</p>
+
+ </div>
+
+
+</body>
+</html>

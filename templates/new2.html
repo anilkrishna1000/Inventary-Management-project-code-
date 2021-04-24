@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flights delay Prediction</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>		
+	<script src="new2.js"></script>
+	<link rel="stylesheet" href="new2.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+    <div>
+	<h2>MONTH</h2>
+    <input class="Month"  type="email" id="MONTH" class="floatLabel" name="MONTH" value="00">
+
+    <h2>DAY</h2>
+    <input class="Day"  type="email" id="DAY" class="floatLabel" name="DAY" value="00">
+
+    <h2>DAY_OF_WEEK</h2>
+    <input class="Day_of_week"  type="email" id="DAY_OF_WEEK" class="floatLabel" name="DAY_OF_WEEK" value="00">
+
+    <h2>SCHEDULED_DEPARTURE</h2>
+    <input class="Scheduled_departure"  type="email" id="SCHEDULED_DEPARTURE" class="floatLabel" name="SCHEDULED_DEPARTURE" value="00">
+
+    <h2>DEPARTURE_TIME</h2>
+    <input class="Departure_time"  type="email" id="DEPARTURE_TIME" class="floatLabel" name="DEPARTURE_TIME" value="00">
+
+    <h2>TAXI_OUT</h2>
+    <input class="Taxi_out"  type="email" id="TAXI_OUT" class="floatLabel" name="TAXI_OUT" value="00">
+
+   <h2>DISTANCE</h2>
+    <input class="Distance"  type="email" id="DISTANCE" class="floatLabel" name="DISTANCE" value="00">
+
+
+    <h2>TAXI_IN</h2>
+    <input class="Taxi_in"  type="email" id="TAXI_IN" class="floatLabel" name="TAXI_IN" value="00">
+
+    <h2>SCHEDULED_ARRIVAL</h2>
+    <input class="Scheduled_arrival"  type="email" id="SCHEDULED_ARRIVAL" class="floatLabel" name="SCHEDULED_ARRIVAL" value="00">
+
+    <h2>ARRIVAL_DELAY</h2>
+    <input class="Arrival_delay"  type="email" id="ARRIVAL_DELAY" class="floatLabel" name="ARRIVAL_DELAY" value="00">
+
+    </div>
+   
+        <h2>AIRLINE</h2>
+    <div>
+        <select class="Airline" name="" id="AIRLINE">
+            <option value="" disabled="disabled" selected="selected">Choose a Airline</option>
+            <option>AIRLINE_AS</option>
+            <option>AIRLINE_B6</option>
+            <option>AIRLINE_DL</option>
+            <option>AIRLINE_EV</option>
+		    <option>AIRLINE_F9</option>
+            <option>AIRLINE_HA</option>
+		    <option>AIRLINE_MQ</option>
+            <option>AIRLINE_NK</option>
+		    <option>AIRLINE_OO</option>
+            <option>AIRLINE_UA</option>
+		    <option>AIRLINE_US</option>
+            <option>AIRLINE_VX</option>
+		    <option>AIRLINE_WN</option>
+		
+		</select>
+    </div>
+      
+   
+</div>
+	<button class="submit" onclick="onClickedPredictdelay()" type="button">Predict delay</button>
+	<div id="Predict_delay" class="result">	<h2></h2> </div>
+</body>
+</html>
