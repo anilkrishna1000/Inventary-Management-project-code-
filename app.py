@@ -12,7 +12,7 @@ model = pickle.load(open("BATCH_PICKLE", "rb"))
 @app.route("/")
 @cross_origin()
 def home():
-    return render_template("d.html")
+    return render_template("De.html")
 
 
 
@@ -42,10 +42,10 @@ def predict():
         
         output=round(prediction[0])
 
-        return render_template('d.html',prediction_text="Number of inventary should be maintained in units {}".format(output))
+        return render_template('De.html',prediction_text="Number of inventary should be maintained in units {}".format(output))
 
 
-    return render_template("d.html")
+    return render_template("De.html")
 
 
 
