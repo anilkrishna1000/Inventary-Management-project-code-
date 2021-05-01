@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/new4.css') }}">
+<style>
+body {
+  background-image: url({{ url_for('static',filename='kk/aa.JFIF')}});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+</head>
+
+<body>
+ <div class="login">
+	<h1>Inventory Mangement</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+         <h5 class="card-title">How many Products need to maintain?</h5>
+
+        
+        <input type="text" name="PRODUCT_TYPE" placeholder="PRODUCT_TYPE" required="required" />
+        <input type="text" name="PROMOTION_APPLIED" placeholder="PROMOTION_APPLIED" required="required" />
+		<input type="text" name="GENERIC_HOLIDAY" placeholder="GENERIC_HOLIDAY" required="required" />
+		<input type="text" name="DAY_OF_WEEK" placeholder="DAY_OF_WEEK" required="required" />
+        
+ 
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
